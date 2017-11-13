@@ -13,16 +13,15 @@ package com.microsoft.java.debug.core.adapter;
 
 import java.util.Map;
 
-import com.microsoft.java.debug.core.IDebugSession;
-
 public interface IProvider {
     /**
      * Initialize this provider.
-     * @param debugSession
+     *
+     * @param debugContext
      *            The associated debug session
      * @param options
      *            the options
      */
-    default void initialize(IDebugSession debugSession, Map<String, Object> options) {
+    default void initialize(IDebugAdapterContext debugContext, Map<String, Object> options) {
     }
 }

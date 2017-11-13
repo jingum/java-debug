@@ -162,9 +162,9 @@ public class LaunchRequestHandler implements IDebugRequestHandler {
         if (launchArguments.projectName != null) {
             options.put(Constants.PROJECTNAME, launchArguments.projectName);
         }
-        sourceProvider.initialize(context.getDebugSession(), options);
+        sourceProvider.initialize(context, options);
         IHotCodeReplaceProvider hcrProvider = context.getProvider(IHotCodeReplaceProvider.class);
-        hcrProvider.initialize(context.getDebugSession(), options);
+        hcrProvider.initialize(context, options);
     }
 
     private static String parseMainClassWithoutModuleName(String mainClass) {

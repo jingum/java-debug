@@ -16,4 +16,6 @@ public interface IHotCodeReplaceProvider extends IProvider {
     void addRedefineClassListener(IRedefineClassListener listener);
 
     void removeRedefineClassListener(IRedefineClassListener listener);
+
+    boolean saveDocument(String documentUri);
 }

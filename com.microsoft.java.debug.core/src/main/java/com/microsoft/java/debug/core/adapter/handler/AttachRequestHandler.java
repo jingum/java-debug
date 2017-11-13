@@ -85,9 +85,9 @@ public class AttachRequestHandler implements IDebugRequestHandler {
             options.put(Constants.PROJECTNAME, attachArguments.projectName);
         }
         ISourceLookUpProvider sourceProvider = context.getProvider(ISourceLookUpProvider.class);
-        sourceProvider.initialize(context.getDebugSession(), options);
+        sourceProvider.initialize(context, options);
         IHotCodeReplaceProvider hcrProvider = context.getProvider(IHotCodeReplaceProvider.class);
-        hcrProvider.initialize(context.getDebugSession(), options);
+        hcrProvider.initialize(context, options);
     }
 
 }
